@@ -19,6 +19,7 @@ import com.mycompany.main.Strategy.*;
 public class Main {
     public static void main(String[] args) {
       //Chain of responsability
+        System.out.println("\n----------------Chain of responsability------------");
         Manejador verificarGarantia = new VerificarGarantia();
         Manejador constatarFallo = new ConstatarFallo();
         Manejador certificarInventario = new CertificarInventario();
@@ -36,10 +37,13 @@ public class Main {
         verificarGarantia.manejar(solicitud);
         
       //Iterator
+        System.out.println("\n----------------Iterator------------");
+
       
       
       
       //Strategy
+      System.out.println("\n-----------------Strategy------------------");
       Context contexto = new Context();
       contexto.setStrategy(new Automotive());
       contexto.doSomething();
