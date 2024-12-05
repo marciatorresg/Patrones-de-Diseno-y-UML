@@ -10,6 +10,7 @@ import com.mycompany.main.ChainofResponsability.Manejador;
 import com.mycompany.main.ChainofResponsability.ConstatarFallo;
 import com.mycompany.main.ChainofResponsability.CertificarInventario;
 import com.mycompany.main.ChainofResponsability.AprobacionGerente;
+import com.mycompany.main.Strategy.*;
 
 /**
  *
@@ -39,9 +40,23 @@ public class Main {
       
       
       //Strategy
+      Context contexto = new Context();
+      contexto.setStrategy(new Automotive());
+      contexto.doSomething();
       
+      contexto.setStrategy(new Airway());
+      contexto.doSomething();
+
+      contexto.setStrategy(new Cyclist());
+      contexto.doSomething();
+
+      contexto.setStrategy(new Railway());
+      contexto.doSomething();
+
+      contexto.setStrategy(new Waterway());
+      contexto.doSomething();
       
-      
+
     }
 }
 
