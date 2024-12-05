@@ -11,6 +11,8 @@ import com.mycompany.main.ChainofResponsability.ConstatarFallo;
 import com.mycompany.main.ChainofResponsability.CertificarInventario;
 import com.mycompany.main.ChainofResponsability.AprobacionGerente;
 import com.mycompany.main.Strategy.*;
+import com.mycompany.main.Iterator.*;
+
 
 /**
  *
@@ -38,27 +40,35 @@ public class Main {
         
       //Iterator
         System.out.println("\n----------------Iterator------------");
+        
+        WebProducts webProducts = new WebProducts();
+        webProducts.addProduct(new Product("001", "Laptop", "Available"));
+        webProducts.addProduct(new Product("002", "Tablet", "Out of Stock"));
 
-      
-      
-      
+        ProductIterator iterator = webProducts.createList();
+        while (iterator.hasNext()) {
+            Product product = iterator.getNext();
+            System.out.println(product.getName() + " - " + product.getState());
+        }
+
+
       //Strategy
-      System.out.println("\n-----------------Strategy------------------");
-      Context contexto = new Context();
-      contexto.setStrategy(new Automotive());
-      contexto.doSomething();
-      
-      contexto.setStrategy(new Airway());
-      contexto.doSomething();
+        System.out.println("\n-----------------Strategy------------------");
+        Context contexto = new Context();
+        contexto.setStrategy(new Automotive());
+        contexto.doSomething();
 
-      contexto.setStrategy(new Cyclist());
-      contexto.doSomething();
+        contexto.setStrategy(new Airway());
+        contexto.doSomething();
 
-      contexto.setStrategy(new Railway());
-      contexto.doSomething();
+        contexto.setStrategy(new Cyclist());
+        contexto.doSomething();
 
-      contexto.setStrategy(new Waterway());
-      contexto.doSomething();
+        contexto.setStrategy(new Railway());
+        contexto.doSomething();
+
+        contexto.setStrategy(new Waterway());
+        contexto.doSomething();
       
 
     }

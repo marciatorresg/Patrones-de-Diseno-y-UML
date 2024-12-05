@@ -14,7 +14,7 @@ public abstract class ManejadorBase implements Manejador {
         if (siguiente != null) {
             siguiente.manejar(solicitud);
         } else {
-            System.out.println("No hay más manejadores en la cadena.");
+            System.out.println("No hay mas manejadores en la cadena.");
         }
     }
 }
