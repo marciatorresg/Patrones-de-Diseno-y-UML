@@ -1,4 +1,6 @@
-package com.mycompany.main;
+package com.mycompany.main.ChainofResponsability;
+
+import com.mycompany.main.ChainofResponsability.Manejador;
 
 public abstract class ManejadorBase implements Manejador {
     private Manejador siguiente;

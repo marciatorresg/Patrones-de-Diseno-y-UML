@@ -1,4 +1,4 @@
-package com.mycompany.main;
+package com.mycompany.main.ChainofResponsability;
 
 public interface Manejador {
 	void manejar(Solicitud solicitud);

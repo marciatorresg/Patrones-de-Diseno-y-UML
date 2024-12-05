@@ -1,4 +1,4 @@
-package com.mycompany.main;
+package com.mycompany.main.ChainofResponsability;
 
 public class AprobacionGerente extends ManejadorBase {
     @Override

@@ -1,4 +1,7 @@
-package com.mycompany.main;
+package com.mycompany.main.ChainofResponsability;
+
+import com.mycompany.main.ChainofResponsability.Solicitud;
+import com.mycompany.main.ChainofResponsability.ManejadorBase;
 
 public class VerificarGarantia extends ManejadorBase {
     @Override
