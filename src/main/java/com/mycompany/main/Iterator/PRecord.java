@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Record {
+public class PRecord {
     private Date date;
     private List<Product> products; // Lista de productos
 
-    public Record(Date date) {
+    public PRecord(Date date) {
         this.date = date;
         this.products = new ArrayList<>();
     }

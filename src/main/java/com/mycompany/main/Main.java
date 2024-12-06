@@ -13,7 +13,6 @@ import com.mycompany.main.ChainofResponsability.AprobacionGerente;
 import com.mycompany.main.Strategy.*;
 import com.mycompany.main.Iterator.*;
 import java.util.Date;
-import java.util.Iterator;
 
 
 /**
@@ -45,7 +44,8 @@ public class Main {
         Product product3 = new Product("003", "Printer", "Defective");
 
         // Crear un registro de productos
-        Iterator.Record record = new Iterator.Record(new Date());
+        Date d= new Date();
+        PRecord record = new PRecord(d);
 
         // Agregar productos al registro
         record.addProduct(product1);
@@ -81,5 +81,6 @@ public class Main {
         contexto.doSomething();
       
     }
+
 }
 

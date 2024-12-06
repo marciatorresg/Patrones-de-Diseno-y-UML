@@ -12,9 +12,9 @@ import java.util.List;
  * @author Gino Leonardo
  */
 public class StoreProducts implements ListProducts {
-     private final Record registro;
+     private final PRecord registro;
 
-    public StoreProducts(Record registro) {
+    public StoreProducts(PRecord registro) {
         this.registro=registro;
         // Add some products to the list
     }
