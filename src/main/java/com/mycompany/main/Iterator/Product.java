@@ -6,10 +6,10 @@ package com.mycompany.main.Iterator;
 
 /**
  *
- * @author User
+ * @author Gino Leonardo
  */
 public class Product {
-    private String cod;
+private String cod;
     private String name;
     private String state;
 
@@ -29,5 +29,14 @@ public class Product {
 
     public String getState() {
         return state;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "cod='" + cod + '\'' +
+                ", name='" + name + '\'' +
+                ", state='" + state + '\'' +
+                '}';
     }
 }

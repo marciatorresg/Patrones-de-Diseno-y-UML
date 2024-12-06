@@ -9,22 +9,18 @@ import java.util.List;
 
 /**
  *
- * @author User
+ * @author Gino Leonardo
  */
 public class StoreProducts implements ListProducts {
-    private List<Product> products;
+     private final Record registro;
 
-    public StoreProducts() {
-        this.products = new ArrayList<>();
-    }
-
-    public void addProduct(Product product) {
-        products.add(product);
+    public StoreProducts(Record registro) {
+        this.registro=registro;
+        // Add some products to the list
     }
 
     @Override
     public ProductIterator createList() {
-        return new StoreIterator(products);
+        return new StoreIterator(registro.getProducts());
     }
 }
-

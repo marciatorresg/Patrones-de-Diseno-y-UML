@@ -4,26 +4,26 @@
  */
 package com.mycompany.main.Iterator;
 
+import com.mycompany.main.Iterator.DefectiveIterator;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
- * @author User
+ * @author Gino Leonardo
  */
-public class DefectiveProducts implements ListProducts {
-    private List<Product> products;
+public class DefectiveProducts implements ListProducts{
+    private final Record registro;
+    
 
-    public DefectiveProducts() {
-        this.products = new ArrayList<>();
-    }
+    public DefectiveProducts(Record registro) {
+        this.registro=registro;
 
-    public void addProduct(Product product) {
-        products.add(product);
+        // Add some products to the list
     }
 
     @Override
     public ProductIterator createList() {
-        return new DefectiveIterator(products);
+        return new DefectiveIterator(registro.getProducts());
     }
 }

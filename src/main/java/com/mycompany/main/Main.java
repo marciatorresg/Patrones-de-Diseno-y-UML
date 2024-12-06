@@ -12,6 +12,8 @@ import com.mycompany.main.ChainofResponsability.CertificarInventario;
 import com.mycompany.main.ChainofResponsability.AprobacionGerente;
 import com.mycompany.main.Strategy.*;
 import com.mycompany.main.Iterator.*;
+import java.util.Date;
+import java.util.Iterator;
 
 
 /**
@@ -34,17 +36,31 @@ public class Main {
         Solicitud solicitud = new Solicitud("Garantia", "Fallo cubierto", 1500);
         verificarGarantia.manejar(solicitud);
         
-      //Iterator
+      // Iterator
         System.out.println("\n----------------Iterator------------");
-        
-        WebProducts webProducts = new WebProducts();
-        webProducts.addProduct(new Product("001", "Laptop", "Available"));
-        webProducts.addProduct(new Product("002", "Tablet", "Out of Stock"));
+
+        // Crear productos
+        Product product1 = new Product("001", "Laptop", "New");
+        Product product2 = new Product("002", "Smartphone", "New");
+        Product product3 = new Product("003", "Printer", "Defective");
+
+        // Crear un registro de productos
+        Iterator.Record record = new Iterator.Record(new Date());
+
+        // Agregar productos al registro
+        record.addProduct(product1);
+        record.addProduct(product2);
+        record.addProduct(product3);
+
+        // Ejemplo de uso:
+        WebProducts webProducts = new WebProducts(record);
         ProductIterator iterator = webProducts.createList();
+
         while (iterator.hasNext()) {
             Product product = iterator.getNext();
-            System.out.println(product.getName() + " - " + product.getState());
+            System.out.println(product);
         }
+
 
       //Strategy
         System.out.println("\n-----------------Strategy------------------");

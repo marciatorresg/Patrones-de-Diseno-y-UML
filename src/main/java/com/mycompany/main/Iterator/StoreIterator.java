@@ -4,12 +4,12 @@
  */
 package com.mycompany.main.Iterator;
 
-/**
- *
- * @author User
- */
 import java.util.List;
 
+/**
+ *
+ * @author Gino Leonardo
+ */
 public class StoreIterator implements ProductIterator {
     private List<Product> products;
     private int position = 0;
@@ -25,6 +25,9 @@ public class StoreIterator implements ProductIterator {
 
     @Override
     public Product getNext() {
-        return hasNext() ? products.get(position++) : null;
+        if (hasNext()) {
+            return products.get(position++);
+        }
+        return null;
     }
 }

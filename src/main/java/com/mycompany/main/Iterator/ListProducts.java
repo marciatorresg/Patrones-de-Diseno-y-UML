@@ -6,7 +6,7 @@ package com.mycompany.main.Iterator;
 
 /**
  *
- * @author User
+ * @author Gino Leonardo
  */
 public interface ListProducts {
     ProductIterator createList();

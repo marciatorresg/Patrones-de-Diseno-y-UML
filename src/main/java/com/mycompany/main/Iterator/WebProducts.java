@@ -9,22 +9,17 @@ import java.util.List;
 
 /**
  *
- * @author User
+ * @author Gino Leonardo
  */
 public class WebProducts implements ListProducts {
+     private final Record registro;
 
-    private List<Product> products;
-
-    public WebProducts() {
-        this.products = new ArrayList<>();
+    public WebProducts(Record registro) {
+        this.registro=registro;
+        // Add some products to the list
     }
-
-    public void addProduct(Product product) {
-        products.add(product);
-    }
-
     @Override
     public ProductIterator createList() {
-        return new WebIterator(products);
+        return new WebIterator(registro.getProducts());
     }
 }
