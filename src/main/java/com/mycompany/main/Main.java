@@ -27,15 +27,11 @@ public class Main {
         Manejador certificarInventario = new CertificarInventario();
         Manejador aprobacionGerente = new AprobacionGerente();
 
-
         verificarGarantia.setSiguiente(constatarFallo);
         constatarFallo.setSiguiente(certificarInventario);
         certificarInventario.setSiguiente(aprobacionGerente);
 
-
         Solicitud solicitud = new Solicitud("Garantia", "Fallo cubierto", 1500);
-
-
         verificarGarantia.manejar(solicitud);
         
       //Iterator
@@ -44,13 +40,11 @@ public class Main {
         WebProducts webProducts = new WebProducts();
         webProducts.addProduct(new Product("001", "Laptop", "Available"));
         webProducts.addProduct(new Product("002", "Tablet", "Out of Stock"));
-
         ProductIterator iterator = webProducts.createList();
         while (iterator.hasNext()) {
             Product product = iterator.getNext();
             System.out.println(product.getName() + " - " + product.getState());
         }
-
 
       //Strategy
         System.out.println("\n-----------------Strategy------------------");
@@ -70,7 +64,6 @@ public class Main {
         contexto.setStrategy(new Waterway());
         contexto.doSomething();
       
-
     }
 }
 
